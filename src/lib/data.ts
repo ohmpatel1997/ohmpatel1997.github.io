@@ -53,7 +53,7 @@ export interface Client {
 export const CLIENTS: Client[] = [
   {
     company: "Coinbase",
-    logo: "/logos/coinbase.png",
+    logo: "logos/coinbase.png",
     tagline: "Scaling blockchain nodes & wallet infrastructure",
     highlights: [
       "Rearchitected infrastructure to scale blockchain nodes and wallets, improving Chainio and Nova services",
@@ -64,7 +64,7 @@ export const CLIENTS: Client[] = [
   },
   {
     company: "Reddit",
-    logo: "/logos/reddit.png",
+    logo: "logos/reddit.png",
     tagline: "Shopping Ads pipeline & infrastructure modernization",
     highlights: [
       "Led creation of Shopping Ads delivery pipeline handling 25M products and ~10M daily impressions, generating $30K revenue/day",
@@ -75,7 +75,7 @@ export const CLIENTS: Client[] = [
   },
   {
     company: "Deliveroo",
-    logo: "/logos/deliveroo.png",
+    logo: "logos/deliveroo.png",
     tagline: "Worldwide McDonald's & Subway order integration",
     highlights: [
       "Built worldwide McDonald's & Subway integration — real-time order processing handling 95,000 orders/day",
@@ -86,7 +86,7 @@ export const CLIENTS: Client[] = [
   },
   {
     company: "Wise",
-    logo: "/logos/wise.png",
+    logo: "logos/wise.png",
     tagline: "Embedded finance platform from zero to scale",
     highlights: [
       "Founding engineer — designed auth system, KYC verification state machine, and intra-bank transfer system with double-entry bookkeeping",
