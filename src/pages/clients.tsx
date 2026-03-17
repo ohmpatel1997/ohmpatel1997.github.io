@@ -1,9 +1,12 @@
 import { CLIENTS, VENTURES } from "@/lib/data";
 import { Building2, Rocket } from "lucide-react";
+import { useState } from "react";
 
 const BASE = import.meta.env.BASE_URL;
 
 export function ClientsPage() {
+  const [flipped, setFlipped] = useState<number | null>(null);
+
   return (
     <div className="mx-auto max-w-3xl px-6 py-20 sm:py-28">
       <div className="animate-fade-in-up">
@@ -16,7 +19,7 @@ export function ClientsPage() {
         <div className="mt-1 h-px w-12 bg-foreground/20" />
         <p className="mt-4 text-[15px] text-muted-foreground leading-relaxed max-w-lg">
           I partner with companies to architect and scale their most critical systems.
-          Hover or tap on a card to see what I delivered.
+          Tap or hover on a card to see what I delivered.
         </p>
       </div>
 
@@ -27,8 +30,9 @@ export function ClientsPage() {
             key={client.company}
             className="animate-fade-in-up group [perspective:1000px]"
             style={{ animationDelay: `${0.1 + i * 0.1}s` }}
+            onClick={() => setFlipped(flipped === i ? null : i)}
           >
-            <div className="relative h-72 w-full transition-transform duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+            <div className={`relative h-72 w-full transition-transform duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] ${flipped === i ? "[transform:rotateY(180deg)]" : ""}`}>
               {/* Front — Logo */}
               <div className="absolute inset-0 flex flex-col items-center justify-center rounded-xl border border-border/60 bg-card/50 p-6 [backface-visibility:hidden]">
                 <div className="flex size-20 items-center justify-center rounded-2xl border border-border/40 bg-background mb-5">
@@ -49,7 +53,8 @@ export function ClientsPage() {
                   {client.tagline}
                 </p>
                 <p className="mt-4 text-xs text-muted-foreground/40">
-                  Hover to see details
+                  <span className="hidden sm:inline">Hover</span>
+                  <span className="sm:hidden">Tap</span> to see details
                 </p>
               </div>
 
