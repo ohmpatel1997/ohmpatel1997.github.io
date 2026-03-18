@@ -162,6 +162,13 @@ export interface Project {
 
 export const PROJECTS: Project[] = [
   {
+    name: "polymarket-ai-bot",
+    description:
+      "AI-powered trading bot for Polymarket prediction markets — automated market analysis and execution.",
+    url: "https://github.com/ohmpatel1997/polymarket-ai-bot",
+    language: "Go",
+  },
+  {
     name: "double-entry-ledger",
     description:
       "Credit card transaction flow using TigerBeetle — demonstrating double-entry bookkeeping patterns for financial systems.",
@@ -181,6 +188,13 @@ export const PROJECTS: Project[] = [
       "Real-time volume-weighted average price calculator for cryptocurrency trading pairs.",
     url: "https://github.com/ohmpatel1997/vwap",
     language: "Go",
+  },
+  {
+    name: "RFC-Storage-Architecture",
+    description:
+      "RFC for end-to-end encrypted data storage on IPFS — bucket-based encryption with secure sharing and account recovery.",
+    url: "https://github.com/ohmpatel1997/RFC-Storage-Architecture",
+    language: "Markdown",
   },
 ];
 
