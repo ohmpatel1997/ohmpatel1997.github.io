@@ -1,28 +1,23 @@
-import { HashRouter, Routes, Route } from "react-router";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Layout } from "@/components/layout";
-import { HomePage } from "@/pages/home";
-import { AboutPage } from "@/pages/about";
-import { ClientsPage } from "@/pages/clients";
-import { ProjectsPage } from "@/pages/projects";
-import { SpeakingPage } from "@/pages/speaking";
-import { ContactPage } from "@/pages/contact";
+import { HeroSection } from "@/pages/home";
+import { AboutSection } from "@/pages/about";
+import { ClientsSection } from "@/pages/clients";
+import { ProjectsSection } from "@/pages/projects";
+import { SpeakingSection } from "@/pages/speaking";
+import { ContactSection } from "@/pages/contact";
 
 export default function App() {
   return (
     <ThemeProvider>
-      <HashRouter>
-        <Routes>
-          <Route element={<Layout />}>
-            <Route index element={<HomePage />} />
-            <Route path="about" element={<AboutPage />} />
-            <Route path="clients" element={<ClientsPage />} />
-            <Route path="projects" element={<ProjectsPage />} />
-            <Route path="speaking" element={<SpeakingPage />} />
-            <Route path="contact" element={<ContactPage />} />
-          </Route>
-        </Routes>
-      </HashRouter>
+      <Layout>
+        <HeroSection />
+        <AboutSection />
+        <ClientsSection />
+        <ProjectsSection />
+        <SpeakingSection />
+        <ContactSection />
+      </Layout>
     </ThemeProvider>
   );
 }

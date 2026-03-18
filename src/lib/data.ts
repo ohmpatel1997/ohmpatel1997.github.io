@@ -46,52 +46,84 @@ export const SKILLS = {
 export interface Client {
   company: string;
   logo?: string;
+  role: string;
+  duration: string;
   tagline: string;
   highlights: string[];
+  logoOnly?: boolean;
 }
 
 export const CLIENTS: Client[] = [
   {
     company: "Coinbase",
     logo: "logos/coinbase.png",
+    role: "Blockchain Engineer Consultant",
+    duration: "May 2024 — Present",
     tagline: "Scaling blockchain nodes & wallet infrastructure",
     highlights: [
-      "Rearchitected infrastructure to scale blockchain nodes and wallets, improving Chainio and Nova services",
+      "Rearchitected Chainio and Nova services — the core blockchain node indexing infrastructure that watches live blockchains and indexes transactions",
       "Chainio system now manages 4x transaction load from blockchain nodes",
       "Enabled BASE and SOLANA to support 1.5x transaction size and 4x transactions per block",
+      "Led stakeholder communication, planning and execution of the entire scaling effort",
       "Reduced datastore requirements, saving $16,000/year per blockchain",
     ],
   },
   {
     company: "Reddit",
     logo: "logos/reddit.png",
+    role: "Software Engineer",
+    duration: "Oct 2022 — May 2024",
     tagline: "Shopping Ads pipeline & infrastructure modernization",
     highlights: [
-      "Led creation of Shopping Ads delivery pipeline handling 25M products and ~10M daily impressions, generating $30K revenue/day",
-      "Re-architected pipeline reducing memory footprint by 50% while scaling product inventory substantially",
-      "Built Product Frequency Cap system — increased CTR by 2% and purchase rates by ~10% for major advertisers",
-      "Led Thrift-to-gRPC migration across Ads org, reducing request latency by 0.5%",
+      "Built the Shopping Ads delivery pipeline from scratch — 25M products, ~10M daily impressions, $30K revenue/day",
+      "Re-architected pipeline with parallel processing and memory optimization — 50% memory reduction while scaling inventory",
+      "Built Product Frequency Cap system — 2% CTR increase, ~10% purchase rate boost for advertisers like BrilliantEarth, Lenovo, HomeDepot",
+      "Led Thrift-to-gRPC migration across Ads org — 0.5% latency reduction, improved service reliability during traffic spikes",
     ],
   },
   {
     company: "Deliveroo",
     logo: "logos/deliveroo.png",
+    role: "Software Engineer",
+    duration: "Jun 2021 — Sep 2022",
     tagline: "Worldwide McDonald's & Subway order integration",
     highlights: [
-      "Built worldwide McDonald's & Subway integration — real-time order processing handling 95,000 orders/day",
-      "System processes 10% of Deliveroo's total daily order volume with 99.03% uptime",
-      "Processes 22,000 daily restaurant menus from McDonald's worldwide",
-      "Reduced order failures by 20% through scalable architecture designed to last 20+ years",
+      "Built end-to-end McDonald's integration — orders from Deliveroo app transformed and injected directly into restaurant POS systems worldwide",
+      "95,000 orders/day (44K from UK alone), 22,000 daily menu syncs, 99.03% uptime — handling 10% of Deliveroo's total daily volume",
+      "Architecture designed for 20+ year lifespan at 4% annual growth — reduced order failures by 20%",
+      "Delivered similar Subway integration handling 9,000 orders/day at 99.16% uptime",
     ],
   },
   {
     company: "Wise",
     logo: "logos/wise.png",
+    role: "Founding Engineer",
+    duration: "Mar 2020 — Jun 2021",
     tagline: "Embedded finance platform from zero to scale",
     highlights: [
-      "Founding engineer — designed auth system, KYC verification state machine, and intra-bank transfer system with double-entry bookkeeping",
-      "Scaled platform to 150M+ API calls and 11B transactions processed",
+      "Designed and built auth system, KYC verification state machine (Onfido), and intra-bank transfer system",
+      "Implemented double-entry bookkeeping ledger for money transfers using QLDB",
+      "Built caching systems for high-volume clients to retrieve transactions at scale",
+      "Scaled platform to 150M+ API calls and 11B transactions processed — Go, TypeScript, Postgres, SQS, AWS",
     ],
+  },
+  {
+    company: "EPAM",
+    logo: "logos/epam.png",
+    role: "",
+    duration: "",
+    tagline: "Global technology services & engineering",
+    highlights: [],
+    logoOnly: true,
+  },
+  {
+    company: "Osmo",
+    logo: "logos/osmo.png",
+    role: "",
+    duration: "",
+    tagline: "Interactive learning & play platform",
+    highlights: [],
+    logoOnly: true,
   },
 ];
 
